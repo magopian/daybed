@@ -54,7 +54,11 @@ ENTRY_POINTS = {
     ]}
 
 if PY2:
-    REQUIREMENTS.append('CouchDB')
+    REQUIREMENTS.append('CouchDB==0.10dev')
+    DEPENDENCY_LINKS.append(
+        'https://github.com/Natim/couchdb-python/tarball/'
+        'authorization_header_py26#egg=CouchDB-0.10dev',
+    )
 else:
     # Python3 version for couchdb
     REQUIREMENTS.append('CouchDB==0.10dev')
